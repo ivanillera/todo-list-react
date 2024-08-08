@@ -32,8 +32,8 @@ function App() {
 
   return (
     <>
-      <main>
-        <h1 className="text-5xl flex justify-center items-center my-10 font-bold">
+      <main className=" select-none">
+        <h1 className="text-5xl flex justify-center items-center my-10 font-bold animate-fade animate-duration-300">
           To Do List
         </h1>
         <div className="p-2 mx-4 md:mx-16 lg:mx-32">

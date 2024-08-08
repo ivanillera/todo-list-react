@@ -3,7 +3,7 @@ import { FaRegCircle, FaRegCircleCheck } from "react-icons/fa6";
 
 export const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
   return (
-    <div className="flex items-center justify-between p-2 border-t-2">
+    <div className="flex items-center justify-between p-2 border-t-2  animate-fade animate-duration-300">
       <div
         className="w-full flex items-center gap-5 text-2xl break-all cursor-pointer mx-3"
         onClick={() => toggleTodo(todo.id)}
@@ -18,7 +18,7 @@ export const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
         </span>
       </div>
       <MdClose
-        className="cursor-pointer text-2xl mr-3 text-red-500"
+        className="cursor-pointer text-3xl mr-3 text-red-500"
         onClick={() => deleteTodo(todo.id)}
       />
     </div>
