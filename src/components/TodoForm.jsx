@@ -4,7 +4,8 @@ export const TodoForm = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState("");
 
   const handleSubmit = (e) => {
-    setNewTodo(e.target.value);
+    e.preventDefault(); // add this line
+    setNewTodo(e.target.value); // no changes here
   };
 
   return (
