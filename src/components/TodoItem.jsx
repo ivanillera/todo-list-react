@@ -1,22 +1,26 @@
-import React from "react";
+import { MdClose } from "react-icons/md";
+import { FaRegCircle, FaRegCircleCheck } from "react-icons/fa6";
 
 export const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
   return (
-    <div className="flex flex-row ">
+    <div className="flex items-center justify-between p-2 border-t-2">
       <div
-        className="bg-green-200 p-4 mb-2 cursor-pointer w-full inline-block"
+        className="w-full flex items-center gap-5 text-2xl break-all cursor-pointer mx-3"
         onClick={() => toggleTodo(todo.id)}
       >
-        <span className={todo.completed ? "line-through" : "none"}>
+        {todo.completed ? (
+          <FaRegCircleCheck className="text-green-500" />
+        ) : (
+          <FaRegCircle />
+        )}
+        <span className={todo.completed ? "line-through" : ""}>
           {todo.title}
         </span>
       </div>
-      <button
-        className="bg-red-200 p-4 mb-2 cursor-pointer"
+      <MdClose
+        className="cursor-pointer text-2xl mr-3 text-red-500"
         onClick={() => deleteTodo(todo.id)}
-      >
-        Eliminar
-      </button>
+      />
     </div>
   );
 };

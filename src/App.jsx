@@ -36,13 +36,13 @@ function App() {
         <h1 className="text-5xl flex justify-center items-center my-10 font-bold">
           To Do List
         </h1>
-        <div className="p-2 mx-4 md:mx-16 lg:mx-32 bg-blue-400">
+        <div className="p-2 mx-4 md:mx-16 lg:mx-32">
           <Header todos={todos} />
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/5">
               <TodoForm addTodo={addTodo} />
             </div>
-            <div className="w-full md:w-4/5">
+            <div className="w-full md:w-4/5 min-h-56">
               <TodoList
                 todos={todos}
                 toggleTodo={toggleTodo}
