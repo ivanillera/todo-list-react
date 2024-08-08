@@ -8,7 +8,7 @@ export const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <div className="bg-red-400 p-12 flex flex-col space-y-4">
+    <div className="bg-red-400 p-12 flex flex-col space-y-4 h-full">
       <input
         type="text"
         placeholder="Nueva tarea"

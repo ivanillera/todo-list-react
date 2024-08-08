@@ -23,17 +23,25 @@ function App() {
     );
   };
 
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <>
       <main>
         <h1 className="text-5xl flex justify-center items-center my-10 font-bold">
           To Do List
         </h1>
-        <div className="p-12 mx-4">
+        <div className="p-2 mx-4 bg-blue-400">
           <Header todos={todos} />
-          <div className="flex flex-row">
+          <div className="flex flex-row ">
             <div className="w-3/4">
-              <TodoList todos={todos} toggleTodo={toggleTodo} />
+              <TodoList
+                todos={todos}
+                toggleTodo={toggleTodo}
+                deleteTodo={deleteTodo}
+              />
             </div>
             <div className="w-1/4">
               <TodoForm addTodo={addTodo} />
