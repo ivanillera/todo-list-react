@@ -33,18 +33,18 @@ function App() {
         <h1 className="text-5xl flex justify-center items-center my-10 font-bold">
           To Do List
         </h1>
-        <div className="p-2 mx-4 bg-blue-400">
+        <div className="p-2 mx-4 md:mx-64 bg-blue-400">
           <Header todos={todos} />
-          <div className="flex flex-row ">
-            <div className="w-3/4">
+          <div className="flex flex-col md:flex-row">
+            <div className="w-full md:w-1/5">
+              <TodoForm addTodo={addTodo} />
+            </div>
+            <div className="w-full md:w-4/5">
               <TodoList
                 todos={todos}
                 toggleTodo={toggleTodo}
                 deleteTodo={deleteTodo}
               />
-            </div>
-            <div className="w-1/4">
-              <TodoForm addTodo={addTodo} />
             </div>
           </div>
         </div>

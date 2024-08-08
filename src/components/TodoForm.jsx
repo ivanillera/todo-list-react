@@ -8,15 +8,16 @@ export const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <div className="bg-red-400 p-12 flex flex-col space-y-4 h-full">
+    <div className="bg-red-400 p-12 flex flex-col space-y-4 h-full items-center ">
       <input
         type="text"
         placeholder="Nueva tarea"
         value={newTodo}
         onChange={handleSubmit}
+        className="w-full "
       />
       <button
-        className="bg-blue-100 p-2 rounded-lg"
+        className="bg-blue-100 p-2 rounded-lg w-full "
         onClick={() => addTodo(newTodo)}
       >
         Agregar tarea

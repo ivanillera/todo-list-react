@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  min-width: 0px;
-}
-
-body {
-  min-height: 100dvh;
-}
-
 h1,
 h2,
 h3,
