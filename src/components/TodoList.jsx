@@ -13,13 +13,12 @@ export const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
       ) : (
         <ul>
           {todos.map((todo) => (
-            <div key={todo.id}>
-              <TodoItem
-                todo={todo}
-                toggleTodo={toggleTodo}
-                deleteTodo={deleteTodo}
-              />
-            </div>
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
+            />
           ))}
         </ul>
       )}
